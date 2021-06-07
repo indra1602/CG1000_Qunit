@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch",
+    "test": "qunit"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.0.0",
+    "gulp": "^3.9.1",
+    "laravel-elixir": "^5.0.0",
+    "qunit": "^2.13.0"
+  },
+  "dependencies": {
+    "sweetalert2": "^9.7.2"
+  }
+}
