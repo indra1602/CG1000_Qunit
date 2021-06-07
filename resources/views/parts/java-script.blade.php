@@ -11,8 +11,12 @@
 <script src="{{ asset('style/src/dist/js/feather.min.js') }}"></script>
 <script src="{{ asset('style/src/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js') }}"></script>
 <script src="{{ asset('style/src/dist/js/sidebarmenu.js') }}"></script>
+
+<!-- Unit Test Java script With QUnit -->
 <script src="{{ asset('style/src/dist/js/TestJs/HomeTest.js') }}"></script>
 <script src="{{ asset('style/src/dist/js/TestJs/ChangePasswordTest.js') }}"></script>
+<script src="{{ asset('style/src/dist/js/TestJs/ProtocolSettingTest.js') }}"></script>
+
 <!--Custom JavaScript -->
 <script src="{{ asset('style/src/dist/js/custom.min.js') }}"></script>
 <!--This page JavaScript -->
