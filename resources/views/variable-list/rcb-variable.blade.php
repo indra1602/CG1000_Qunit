@@ -100,29 +100,6 @@
                                 </form>
                             </div>
 
-                            <!-- <div class="card-body border-top"> -->
-                                <!-- <h5 class="name-title">Browse Variable</h5></label> -->
-                                    <!-- <div class="form-group row"> -->
-                                        <!-- <label class="col-1 col-sm-1 col-form-label text-sm-left">ID Slot</label> -->
-                                        <!-- <div class="col-3 col-sm-3"> -->
-                                            <!-- <select name="SLAVE_SLOT_RCB" id="SLAVE_SLOT_RCB" class="selectpicker form-control"> -->
-                                                <!-- <option value="" disabled="true" selected="true">===== Select Slot =====</option> -->
-                                                <!-- @foreach($GENERAL_SETTING as $gs) -->
-                                                    <!-- <option value="{{$gs->ID_SLOT}}">{{$gs->ID_SLOT}}</option> -->
-                                                <!-- @endforeach -->
-                                            <!-- </select> -->
-                                        <!-- </div> -->
-                                    <!-- <div class="col-3 col-sm-3" id="ip_idSlotRcb"> -->
-                                        <!-- <input type="text" class="form-control" id="ip_idSlotValueRcb" readonly> -->
-                                    <!-- </div> -->
-                                    <!-- <button id='browseRcb' class="btn btn-info btn-rounded"> Browse </button> -->
-                                    <!-- <input type="text" class="form-control" id="triggerdata" value="" hidden> -->
-                                    <!-- <div id='loading' class="col-3 col-sm-3"id="id_ip_id_slot"> -->
-                                        <!-- <img src="/style/src/assets/images/load.gif" alt="loader" style="width:30px;height:30px;"> -->
-                                    <!-- </div> -->
-                                <!-- </div> -->
-                            <!-- </div> -->
-
                         </div>
                     </div>
                 </div>
@@ -141,7 +118,6 @@
                                                 <th class="border-1">Type</th>
                                                 <th class="border-1">Address</th>
                                                 <th class="border-1">Access</th>
-                                                <!-- <th class="border-1">Value</th> -->
                                                 <th class="border-1">Action</th>
                                                 <th class="border-1">
                                                     <input type="Checkbox" name="selectRcbAll" class="selectRcbAll">
@@ -200,6 +176,8 @@
                 <!-- *************************************************************** -->
                 <!-- End Master Variable Contents -->
                 <!-- *************************************************************** -->
+                <div id="qunit"></div>
+                <div id="qunit-fixture"></div>
             </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->

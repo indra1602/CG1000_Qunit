@@ -25,12 +25,6 @@
                         <span class="hide-menu">SNMP Driver</span>
                     </a>
                 </li>
-                <!-- <li class="sidebar-item">  -->
-                    <!-- <a class="sidebar-link sidebar-link" href="/mqtt-driver" aria-expanded="false"> -->
-                        <!-- <i data-feather="cloud" class="feather-icon"></i> -->
-                        <!-- <span class="hide-menu">MQTT Driver</span> -->
-                    <!-- </a> -->
-                <!-- </li> -->
                 <li class="sidebar-item"> 
                     <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                         <i data-feather="list" class="feather-icon"></i>
@@ -66,43 +60,11 @@
                                 </li>
                             </ul>
                         </li>
-                        
-                        <!-- <li class="sidebar-item"> -->
-                            <!-- <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"> -->
-                                <!-- <span class="hide-menu">Master Variables</span> -->
-                            <!-- </a> -->
-                            <!-- <ul aria-expanded="false" class="collapse second-level base-level-line"> -->
-                                <!-- <li class="sidebar-item"> -->
-                                    <!-- <a href="/variable-list/master-variable" class="sidebar-link"> -->
-                                        <!-- <span class="hide-menu">OPC UA Variables</span> -->
-                                    <!-- </a> -->
-                                <!-- </li> -->
-                                <!-- <li class="sidebar-item"> -->
-                                    <!-- <a href="/variable-list/opc-variable" class="sidebar-link"> -->
-                                        <!-- <span class="hide-menu">Len VPS</span> -->
-                                    <!-- </a> -->
-                                <!-- </li> -->
-
-                            <!-- </ul> -->
-                        <!-- </li> -->
-
                         <li class="sidebar-item">
                             <a href="/variable-list/master-variable" class="sidebar-link">
                                 <span class="hide-menu">Master Variables</span>
                             </a>
                         </li>
-                        <!-- <li class="sidebar-item"> -->
-                            <!-- <a href="/variable-list/opc-variable" class="sidebar-link"> -->
-                                <!-- <span class="hide-menu">OPC UA</span> -->
-                            <!-- </a> -->
-                        <!-- </li> -->
-
-                        <!-- <li class="sidebar-item"> -->
-                            <!-- <a href="/variable-list/variable-value" class="sidebar-link"> -->
-                                <!-- <span class="hide-menu">Variable Values</span> -->
-                            <!-- </a> -->
-                        <!-- </li> -->
-
                     </ul>
                 </li>
                 <li class="sidebar-item"> 

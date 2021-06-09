@@ -325,7 +325,6 @@
                                             <a class="dropdown-item deleteAllSlaveVariable" href="javascript:void(0)">Delete All</a>
                                         </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -337,6 +336,8 @@
                 <!-- *************************************************************** -->
                 <!-- End Slave Variable Contents -->
                 <!-- *************************************************************** -->
+                <div id="qunit"></div>
+                <div id="qunit-fixture"></div>
             </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->

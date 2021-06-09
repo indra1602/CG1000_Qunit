@@ -13,16 +13,7 @@
 <script src="{{ asset('style/src/dist/js/sidebarmenu.js') }}"></script>
 
 <!-- Unit Test Java script With QUnit -->
-<script src="{{ asset('style/src/dist/js/TestJs/HomeTest.js') }}"></script>
-<!-- <script src="{{ asset('style/src/dist/js/TestJs/HomePopupTest.js') }}"></script> -->
-<script src="{{ asset('style/src/dist/js/TestJs/ChangePasswordTest.js') }}"></script>
-<script src="{{ asset('style/src/dist/js/TestJs/ProtocolSettingTest.js') }}"></script>
-<!-- <script src="{{ asset('style/src/dist/js/TestJs/ProtocolSettingSlaveTest.js') }}"></script> -->
-<script src="{{ asset('style/src/dist/js/TestJs/SlaveVariableTest.js') }}"></script>
-<script src="{{ asset('style/src/dist/js/TestJs/MasterVariableTest.js') }}"></script>
-<script src="{{ asset('style/src/dist/js/TestJs/IecVariableTest.js') }}"></script>
-<script src="{{ asset('style/src/dist/js/TestJs/RcbVariableTest.js') }}"></script>
-<script src="{{ asset('style/src/dist/js/TestJs/fepscript.js') }}"></script>
+<script src="{{ asset('style/src/dist/js/TestJs/HomePopupTest.js') }}"></script>
 
 <!--Custom JavaScript -->
 <script src="{{ asset('style/src/dist/js/custom.min.js') }}"></script>

@@ -14,7 +14,7 @@ QUnit.module('Test General Setting', function(){
         $('#SETTING_MASTER').empty()
         $('#SETTING_MASTER').append('<a data-toggle="modal"     href="#masterConfOPCUA"><i class="fas fa-cog"></i>Protocol     Configuration..</a>')
         assert.equal(idMaster, 1, "Link OPC UA Server has been selected")
-        })
+      })
     } else {
       QUnit.test('Test event Change Master Protocol', function(assert){
         $('#SETTING_MASTER').empty()
@@ -170,7 +170,181 @@ QUnit.module('Test General Setting', function(){
       })
     }
   })
+
+  // -----------------------------
+  // ---- END GENERAL SETTING ----
+  // -----------------------------
+
+  // ---------------------------------------------
+  // ---- START CODING POP UP STATUS PROTOCOL ----
+  // ---------------------------------------------
+  
+  // MODBUS RTU PAGE
+  $('#SERIAL_TYPE').on('change', function(e) {
+    const serialType = $('#SERIAL_TYPE').val()
+    console.log(serialType)
+  
+    const option0 = '<option value="" disabled="true">==== Port ====</option>'
+    const option1 = '<option value="1">1</option>'
+    const option2 = '<option value="2">2</option>'
+    const arr1 = []
+    const arr2 = []
+  
+    arr1.push(option0, option1)
+    arr2.push(option0, option1, option2)
+    console.log(serialType)
+  
+    if (serialType === 'RS232') {
+      $('#PORT_RTU').empty()
+      $('#PORT_RTU').append(arr1)
+      $('#PORT_RTU').val(response[2])
+    } else {
+      $('#PORT_RTU').empty()
+      $('#PORT_RTU').append(arr2)
+      $('#PORT_RTU').val(response[2])
+    }
+  })
+    
+  // update ajax tcp
+  $(document).on('click', '.UpdateAjaxTcp', function() {
+    const idSlot = $('#SLAVE_SLOT').val()
+    const idSlave = $('#SLAVE_PROTOCOL').val()
+    const mainIp = $('#SLAVE_IP').val()
+    const secIp = $('#SLAVE_ND').val()
+    const port = $('#SLAVE_PORT').val()
+    const pooling = $('#SLAVE_Time').val()
+    const timeout = $('#SLAVE_Timeout').val()
+  
+    $.ajax({
+      url: '/general-setting/tcp-config/update',
+      type: 'get',
+      dataType: 'json',
+      data: {
+        idSlot: idSlot,
+        idSlave: idSlave,
+        mainIp: mainIp,
+        secIp: secIp,
+        port: port,
+        pooling: pooling,
+        timeout: timeout
+      },
+      success: function(response) {
+        if (response === 1) {
+          Swal.fire(
+            'Success !',
+            'Data Edited',
+            'success'
+          )
+          $('#slaveConfTCP').modal('hide')
+          location.reload()
+        } else {
+          Swal.fire(
+            'Error !',
+            'Update data error',
+            'error'
+          )
+        }
+      },
+      error: function(xhr, ajaxOptions, thrownError) {
+        alert(thrownError)
+      }
+    })
+  })
+  
+  // update ajax IEC
+  $(document).on('click', '.UpdateAjaxIec', function() {
+    const idSlotIec = $('#SLAVE_SLOT_IEC').val()
+    const idSlaveIec = $('#SLAVE_PROTOCOL_IEC').val()
+    const mainIpIec = $('#SLAVE_IP_IEC').val()
+    const secIpIec = $('#SLAVE_ND_IEC').val()
+    const portIec = $('#SLAVE_PORT_IEC').val()
+    const poolingIec = $('#SLAVE_Time_IEC').val()
+    const timeoutIec = $('#SLAVE_Timeout_IEC').val()
+  
+    $.ajax({
+      url: '/general-setting/iec-config/update',
+      type: 'get',
+      dataType: 'json',
+      data: {
+        idSlotIec: idSlotIec,
+        idSlaveIec: idSlaveIec,
+        mainIpIec: mainIpIec,
+        secIpIec: secIpIec,
+        portIec: portIec,
+        poolingIec: poolingIec,
+        timeoutIec: timeoutIec
+      },
+      success: function(response) {
+        if (response === 1) {
+          Swal.fire(
+            'Success !',
+            'Data Edited',
+            'success'
+          )
+          $('#slaveConfIEC').modal('hide')
+          location.reload()
+        } else {
+          Swal.fire(
+            'Error !',
+            'Update data error',
+            'error'
+          )
+        }
+      },
+      error: function(xhr, ajaxOptions, thrownError) {
+        alert(thrownError)
+      }
+    })
+  })
+    
+  // update ajax RTU
+  $(document).on('click', '.UpdateAjaxRtu', function() {
+    const slaveSlot = $('#SLAVE_SLOT').val()
+    const slaveProtocol = $('#SLAVE_PROTOCOL').val()
+    const serialType = $('#SERIAL_TYPE').val()
+    const portRtu = $('#PORT_RTU').val()
+    const baudRate = $('#BAUD_RATE').val()
+    const parity = $('#PARITY').val()
+    const dataBits = $('#DATA_BITS').val()
+    const stopBits = $('#STOP_BITS').val()
+  
+    $.ajax({
+      url: '/general-setting/rtu-config/update',
+      type: 'get',
+      dataType: 'json',
+      data: {
+        slaveSlot: slaveSlot,
+        slaveProtocol: slaveProtocol,
+        serialType: serialType,
+        portRtu: portRtu,
+        baudRate: baudRate,
+        parity: parity,
+        dataBits: dataBits,
+        stopBits: stopBits
+      },
+      success: function(response) {
+        if (response === 1) {
+          Swal.fire(
+            'Success !',
+            'Data Edited',
+            'success'
+          )
+          $('#slaveConfRTU').modal('hide')
+          location.reload()
+        } else {
+          Swal.fire(
+            'Error !',
+            'Update data error',
+            'error'
+          )
+        }
+      },
+      error: function(xhr, ajaxOptions, thrownError) {
+        alert(thrownError)
+      }
+    })
+  })
+  // ------------------------------------------
+  // ---- END CODING POP UP Slave PROTOCOL ----
+  // ------------------------------------------
 })
-// -----------------------------
-// ---- END GENERAL SETTING ----
-// -----------------------------

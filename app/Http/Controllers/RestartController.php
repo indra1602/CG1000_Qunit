@@ -27,8 +27,8 @@ class RestartController extends Controller
     public function restartMain()
     {
         try {
-            $host = GeneralSettingModel::where('ID_MASTER', '1') ->value('IP_MAIN');
-            // $host = "127.0.0.1";
+            // $host = GeneralSettingModel::where('ID_MASTER', '1') ->value('IP_MAIN');
+            $host = "127.0.0.1";
             $port = 235;
             $message = "r";
             set_time_limit(0);
@@ -58,8 +58,8 @@ class RestartController extends Controller
     public function restartBackup()
     {
         try {
-            $host_backup = GeneralSettingModel::where('ID_MASTER', '1')->value('IP_BACKUP');
-            // $host_backup = "127.0.0.1";
+            // $host_backup = GeneralSettingModel::where('ID_MASTER', '1')->value('IP_BACKUP');
+            $host_backup = "127.0.0.1";
             $port = 235;
             $message = "r";
             set_time_limit(0);

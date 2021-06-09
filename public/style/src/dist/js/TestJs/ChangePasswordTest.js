@@ -7,7 +7,7 @@ QUnit.module('Test change password', function(){
     console.log(cPassword)
 
     if (((nPassword === '') && (cPassword === '')) || (nPassword !== cPassword) ) {
-      QUnit.test('Test event click function toggle SNMP display', function(assert){
+      QUnit.test('Validation data change password', function(assert){
         assert.notOk(true, 'incomplete data ')
       })
     } else {

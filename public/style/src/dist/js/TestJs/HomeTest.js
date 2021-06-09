@@ -188,9 +188,9 @@ QUnit.module('Test event button restart', function(){
       confirmButtonText: 'Restart'
     }).then((result) => {
       if (result.value) {
+        myTimer()
         QUnit.test('Test event click button reatart', function(assert){
-          myTimer()
-          window.location = '/restart'
+          location = '/restart'
           i = 0
           assert.ok(true,'Restart response')
         })
@@ -212,3 +212,78 @@ QUnit.module('Test event button restart', function(){
 // ----------------------------------------
 // ---- END RESTART BUTTON CONFIRMATION ---
 // ----------------------------------------
+
+// ------------------------------------
+// ---- popup modal slave protocol ----
+// ------------------------------------
+$(document).on('click', '#nampilin_modal_1', function() {
+  const id = $(this).data('id')
+
+  $.ajax({
+    url: '/general-setting/data-modal',
+    type: 'get',
+    dataType: 'json',
+    data: { id: id },
+    success: function(response) {
+      $('#SLAVE_SLOTES').val(id)
+      $('#active_slave').val(response)
+    },
+    error: function(xhr, ajaxOptions, thrownError) {
+      console.log(thrownError)
+    }
+  })
+})
+
+$(document).on('click', '#nampilin_modal_2', function() {
+  const id = $(this).data('id')
+
+  $.ajax({
+    url: '/general-setting/data-modal',
+    type: 'get',
+    dataType: 'json',
+    data: { id: id },
+    success: function(response) {
+      $('#SLAVE_SLOTES').val(id)
+      $('#active_slave').val(response)
+    },
+    error: function(xhr, ajaxOptions, thrownError) {
+      console.log(thrownError)
+    }
+  })
+})
+
+$(document).on('click', '#nampilin_modal_3', function() {
+  const id = $(this).data('id')
+
+  $.ajax({
+    url: '/general-setting/data-modal',
+    type: 'get',
+    dataType: 'json',
+    data: { id: id },
+    success: function(response) {
+      $('#SLAVE_SLOTES').val(id)
+      $('#active_slave').val(response)
+    },
+    error: function(xhr, ajaxOptions, thrownError) {
+      console.log(thrownError)
+    }
+  })
+})
+
+$(document).on('click', '#nampilin_modal_4', function() {
+  const id = $(this).data('id')
+
+  $.ajax({
+    url: '/general-setting/data-modal',
+    type: 'get',
+    dataType: 'json',
+    data: { id: id },
+    success: function(response) {
+      $('#SLAVE_SLOTES').val(id)
+      $('#active_slave').val(response)
+    },
+    error: function(xhr, ajaxOptions, thrownError) {
+      console.log(thrownError)
+    }
+  })
+})

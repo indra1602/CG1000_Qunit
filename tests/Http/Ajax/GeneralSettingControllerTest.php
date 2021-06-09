@@ -31,23 +31,7 @@ class GeneralSettingControllerTest extends TestCase
         echo "\nPooling Time : $POOLING_TIME";
         echo "\nTimeout      : $TIMEOUT";
 
-        // $JsonArray = json_encode($arr);
-        // return json_encode($arr);
         $this->assertNotNull(json_encode($arr), "Json_encode is a NULL");
-        // $this->assertEquals();,
-
-        // $this->assertArrayHasKey(json_encode($arr[1]), json_encode($arr));
-
-        // $test = $this->get('/setdatamodaltcp')->seeJsonStructure([
-            // 'ID_SLOT' => "192.168.100.205"
-        // ]);
-
-        // echo $test;
-
-        // $this->json('get', '/setdatamodaltcp', ['ID_SLOT' => '1'])
-        // ->seeJsonEquals([
-            // 'created' => true,
-        // ]);
     }
 
     public function testSetRtu()
@@ -180,14 +164,8 @@ class GeneralSettingControllerTest extends TestCase
     {
         $id = '3';
         $slave_status = GeneralSettingModel::select('ACTIVE')->where('ID_SLOT', $id)->value('ACTIVE');
-        // $slave_status = Null;
-        
-        // echo "Slave status : $slave_status";
-
         echo json_encode($slave_status);
-        // return json_encode($slave_status);
 
         $this->assertNotNull(json_encode($slave_status), "Json_encode is a NULL");
-        // $this->assertNull($slave_status, "Json_encode is a Not NULL");
     }
 }
